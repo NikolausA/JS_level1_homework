@@ -173,9 +173,7 @@ function haveFood(unit) {
     if (unit_classes.includes('food-unit')) {
         check = true;
         createFood();
-        function currentScore() {
-            score++;
-        }
+        score++;
     }
     return check;
 }
@@ -211,7 +209,6 @@ function createFood() {
 function makeScoreBoard(score) {
     var score_board = document.createElement('div');
     score_board.setAttribute('class', 'score-board');
-    currentScore();
     score_board.innerText = 'Ваш результат ' + score + ' съеденных кроликов';
     score_board.style.border = '4px solid blue';
     document.getElementById('snake-field').appendChild(score_board);
